@@ -21,7 +21,7 @@ export function Home() {
       <Header>
         <ContentWrapper>
             <UserInfo>
-                <Photo source={{uri: 'https://github.com/leonardo-silva.png'}}/>
+                <Photo source={{uri: 'https://github.com/jairopedr.png'}}/>
                 <User>
                     <UserGreeting>Olá, </UserGreeting>
                     <UserName>Rodrigo!</UserName>
