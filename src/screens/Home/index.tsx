@@ -24,7 +24,7 @@ export function Home() {
                 <Photo source={{uri: 'https://github.com/jairopedr.png'}}/>
                 <User>
                     <UserGreeting>Olá, </UserGreeting>
-                    <UserName>Rodrigo!</UserName>
+                    <UserName>Jairo Pedro!</UserName>
                 </User>
             </UserInfo>
 
