@@ -3,6 +3,9 @@ import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 import styled from 'styled-components/native';
 import {MaterialIcons} from '@expo/vector-icons';
 
+import { FlatList, FlatListProps } from 'react-native';
+import { DataListProps } from '.';
+
 export const Container = styled.View`
     flex: 1;
     background-color: ${({ theme }) => theme.colors.primary};
@@ -66,3 +69,18 @@ export const HighlightCards = styled.ScrollView.attrs({
     position: absolute;
     margin-top: ${RFValue(165) + getStatusBarHeight()}px;
 `;
+
+export const Transactions = styled.View`
+    flex: 1;
+    padding: 0 24px;
+    margin-top: ${RFValue(193)}px;
+    padding-bottom: 14px;
+`;
+
+export const Title = styled.Text`
+    color: ${({theme}) => theme.colors.shape};
+    font-size: ${RFValue(20)}px;
+    font-family: ${({theme}) => theme.fonts.extraBold};
+`;
+
+export const TransactionList = styled(FlatList as new (props: FlatListProps<DataListProps>) => FlatList<DataListProps>).attrs({showsHorizontalScrollIndicator: false})``;

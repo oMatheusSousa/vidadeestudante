@@ -1,7 +1,11 @@
 import styled from "styled-components/native";
 
-import {SimpleLineIcons} from '@expo/vector-icons'
+import {SimpleLineIcons, FontAwesome5} from '@expo/vector-icons'
 import { RFValue } from "react-native-responsive-fontsize";
+
+interface TypeProps {
+    type: 'income' | 'expense' | 'total';
+}
 
 export const Container = styled.View`
     background-color: ${({ theme }) => theme.colors.shape};
@@ -23,7 +27,12 @@ export const Title = styled.Text `
     color: ${({theme}) => theme.colors.title};
 `;
 
-export const Icon = styled(SimpleLineIcons) `
+export const Icon = styled(SimpleLineIcons)<TypeProps> `
+    font-size: ${RFValue(41)}px;;
+    color: ${({theme, type}) => type === 'income' ? theme.colors.income : theme.colors.expense};    
+`;
+
+export const IconTotal = styled(FontAwesome5)<TypeProps> `
     font-size: ${RFValue(41)}px;;
     color: ${({theme}) => theme.colors.income};
 `;
