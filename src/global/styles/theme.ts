@@ -14,6 +14,7 @@ export default {
     },
     fonts: {
         bold: 'Raleway_700Bold',
+        black: 'Raleway_900Black',
         regular: 'Raleway_400Regular',
         extraBold: 'Raleway_800ExtraBold',
         semiBold: 'Raleway_600SemiBold'
