@@ -67,13 +67,13 @@ export const HighlightCards = styled.ScrollView.attrs({
 })`
     width: 100%;
     position: absolute;
-    margin-top: ${RFValue(165) + getStatusBarHeight()}px;
+    margin-top: ${RFValue(152) + getStatusBarHeight()}px;
 `;
 
 export const Transactions = styled.View`
     flex: 1;
     padding: 0 24px;
-    margin-top: ${RFValue(193)}px;
+    margin-top: ${RFValue(190)}px;
     padding-bottom: 14px;
 `;
 

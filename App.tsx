@@ -1,9 +1,9 @@
 import React from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 
-import { Home } from './src/screens/Home';
-import { Register } from './src/screens/Register';
 import {ThemeProvider} from 'styled-components';
+
+import { NavigationContainer } from '@react-navigation/native';
 
 import { useFonts,
 Raleway_700Bold, 
@@ -15,6 +15,7 @@ Raleway_500Medium } from '@expo-google-fonts/raleway';
 
 import theme from './src/global/styles/theme';
 import AppLoading from 'expo-app-loading';
+import { AppRoutes } from './src/routes/app.routes';
 
 
 export default function App() {
@@ -33,7 +34,9 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <StatusBar style="light" />
-      <Register />
+      <NavigationContainer>        
+        <AppRoutes />
+      </NavigationContainer>
     </ThemeProvider>
   );
 }
